@@ -19,7 +19,7 @@ class Room(models.Model):
     class Meta:
         ordering = ['-update', '-create']
 
-    def _str_(self):
+    def __str__(self):
         return self.name
     
 class Message(models.Model):
@@ -32,5 +32,5 @@ class Message(models.Model):
     class Meta:
         ordering = ['-update', '-create']
 
-    def _str_(self):
+    def __str__(self):
         return self.body[0:50]
